@@ -1,0 +1,29 @@
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sample DragFile</title>
+    <link rel="stylesheet" href="css/dragFile.css" />
+  </head>
+  <body>
+    <!-- COPY -->
+    <div class="dropFile">
+      <div class="dropFile__filesArea">
+        <div class="dropFile__infoMessage">
+          Drop files here or click to
+          <span class="dropFile__highlight">browse</span>
+        </div>
+        <div class="dropFile__filesContainer hidden">
+          <!-- append files added here -->
+        </div>
+      </div>
+      <div class="dropFile__foil">
+        <!-- if you want a single file remove property 'multiple' -->
+        <input type="file" class="dropFile__input" multiple />
+      </div>
+    </div>
+    <!-- END COPY -->
+  </body>
+
+  <script src="plugins/Jquery/jquery-3.6.0.min.js"></script>
+  <script src="js/dragFile.js"></script>
+</html>

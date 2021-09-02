@@ -1,0 +1,134 @@
+.dropFile {
+  /* need width and height != auto to work */
+  height: 276px;
+  position: relative; /* need to work */
+  width: 600px;
+}
+
+.dropFile__filesArea,
+.dropFile__btnFile,
+.dropFile__foil,
+.dropFile__filesContainer,
+.dropFile__input {
+  height: 100%; /* need to work */
+  width: 100%; /* need to work */
+}
+
+.dropFile__filesArea {
+  align-items: center;
+  background-color: #fff;
+  border: 2px dashed #adadad;
+  border-radius: 7px;
+  cursor: pointer;
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  justify-content: center;
+}
+
+.dropFile__filesContainer {
+  align-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  overflow-y: auto;
+  flex-wrap: wrap;
+  padding: 8px;
+  z-index: 1;
+}
+
+.dropFile__foil {
+  border-radius: 7px;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.dropFile__input {
+  border-radius: 7px;
+  cursor: pointer;
+  left: 2px;
+  opacity: 0;
+  position: absolute;
+  top: 2px;
+}
+
+.dropFile__infoMessage {
+  display: block;
+  font-size: 1.15em;
+}
+
+.dropFile__highlight {
+  color: #2275d7;
+}
+
+.file {
+  align-content: flex-start;
+  align-items: flex-start;
+  background: linear-gradient(to bottom, #eee, #ddd);
+  border-radius: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100px;
+  justify-content: center;
+  margin: 8px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100px;
+}
+
+.file__name,
+.file__size {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 0 0.4em;
+  text-align: center;
+}
+
+.file__size {
+  font-size: 16px;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.file__name {
+  font-size: 12px;
+  width: 70%;
+}
+
+.file__remove {
+  align-items: center;
+  background: red;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+}
+
+.file__remove:hover {
+  opacity: 1;
+}
+
+.dragDetected .dropFile__foil {
+  z-index: 2; /* need to work */
+}
+
+.dragOn {
+  background: #eaeaead1;
+  border: 2px dashed #2275d7;
+}
+
+.hidden,
+.dropFile__filesContainer::-webkit-scrollbar {
+  display: none;
+}
